@@ -1,0 +1,59 @@
+{
+	"name": "search",
+	"displayName": "Search",
+	"description": "Some search helpers.",
+	"version": "0.0.1",
+	"publisher": "usernamehw",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"search"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/usernamehw/vscode-search"
+	},
+	"activationEvents": [
+		"onCommand:search.fileHasAllWords",
+		"onCommand:search.lineHasAllWords"
+	],
+	"main": "./dist/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "search.fileHasAllWords",
+				"title": "Find a file that has all provided words."
+			},
+			{
+				"command": "search.lineHasAllWords",
+				"title": "Find a line that has all provided words."
+			}
+		],
+		"configuration": {
+			"properties": {}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production --colors",
+		"compile": "webpack --mode development",
+		"watch": "webpack --mode development --watch --display=minimal"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.62",
+		"@types/vscode": "^1.47.0",
+		"@typescript-eslint/eslint-plugin": "^4.2.0",
+		"@typescript-eslint/parser": "^4.2.0",
+		"eslint": "^7.10.0",
+		"eslint-plugin-no-autofix": "1.0.1",
+		"friendly-errors-webpack-plugin": "^1.7.0",
+		"ts-loader": "^8.0.4",
+		"typescript": "^4.0.3",
+		"webpack": "^4.44.2",
+		"webpack-cli": "^3.3.12"
+	}
+}
