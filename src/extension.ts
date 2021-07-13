@@ -1,16 +1,7 @@
-import { IFindInFilesArgs } from 'src/types';
+import { IFindInFilesArgs } from './types';
 import vscode, { commands, ExtensionContext, window } from 'vscode';
 
-// export const EXTENSION_NAME = 'search';
-// export let extensionConfig: ExtensionConfig;
-
-// export class Global {
-// 	static extensionContext: ExtensionContext;
-// }
-
 export function activate(extensionContext: ExtensionContext): void {
-	// Global.extensionContext = extensionContext;
-
 	commands.registerCommand('search.fileHasAllWords', async () => {
 		const input = await window.showInputBox();
 		if (!input) {
@@ -64,5 +55,4 @@ export function activate(extensionContext: ExtensionContext): void {
 
 
 
-// export function disposeEverything(): void { }
 export function deactivate(): void { }

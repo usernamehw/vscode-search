@@ -3,31 +3,18 @@
 		"module": "commonjs",
 		"target": "ES2019",
 		"outDir": "out",
-		"suppressImplicitAnyIndexErrors": true,
 		"lib": [
-			"ES5",
-			"ES2015",
-			"ES2016",
-			"ES2017",
-			"ES2018"
+			"ES2019"
 		],
-		"baseUrl": ".",
-		"paths": {
-			"src/*": [
-			  "./src/*"
-			]
-		},
 		"sourceMap": true,
 		"rootDir": "src",
 		"strict": true,
 		"esModuleInterop": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
 	},
-	"include": [
-		"src/**/*.ts"
-	],
 	"exclude": [
 		"node_modules",
-		".vscode-test"
+		"scripts"
 	]
 }
